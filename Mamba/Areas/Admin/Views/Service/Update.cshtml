@@ -1,0 +1,32 @@
+﻿@model UpdateServiceVM
+<div class="content-wrapper">
+	<div class="row">
+		<div class="col-lg-12 grid-margin stretch-card">
+			<div class="card">
+				<div class="card-body">
+					<form class="forms-sample" method="post" enctype="multipart/form-data">
+						<img src="~/assets/img/@Model.ImageUrl" style="width:200px"/>
+						<div class="form-group">
+							<label asp-for="Photo">Photo</label>
+							<input asp-for="Photo" class="form-control">
+							<span class="text-danger" asp-validation-for="Photo"></span>
+						</div>
+						<div class="form-group">
+							<label asp-for="Name">Name</label>
+							<input asp-for="Name" class="form-control" placeholder="Name">
+							<span class="text-danger" asp-validation-for="Name"></span>
+						</div>
+						<div class="form-group">
+							<label asp-for="Description">Description</label>
+							<input asp-for="Description" class="form-control" placeholder="Description">
+							<span class="text-danger" asp-validation-for="Description"></span>
+						</div>
+						<button type="submit" class="btn btn-primary me-2">Submit</button>
+						<a asp-action="Index" class="btn btn-light">Cancel</a>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+

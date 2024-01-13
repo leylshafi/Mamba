@@ -1,0 +1,13 @@
+﻿@model Position
+<div class="container">
+	<h1>@Model.Name</h1>
+	@foreach (Employee employee in Model.Employees)
+	{
+		<div class="card" style="width: 18rem;">
+			<img src="~/assets/img/@employee.ImageUrl" class="card-img-top" alt="...">
+			<div class="card-body">
+				<h5 class="card-title">@employee.Name</h5>
+			</div>
+		</div>
+	}
+</div>

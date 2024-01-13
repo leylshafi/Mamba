@@ -1,0 +1,61 @@
+﻿@model UpdateEmployeeVM
+<div class="content-wrapper">
+	<div class="row">
+		<div class="col-lg-12 grid-margin stretch-card">
+			<div class="card">
+				<div class="card-body">
+					<form class="forms-sample" method="post" enctype="multipart/form-data">
+						<div class="form-group">
+							<img src="~/assets/img/@Model.ImageUrl" style="width:200px;"/>
+						</div>
+						<div class="form-group">
+							<label asp-for="Photo">Photo</label>
+							<input asp-for="Photo" class="form-control">
+							<span class="text-danger" asp-validation-for="Photo"></span>
+						</div>
+						<div class="form-group">
+							<label asp-for="Name">Name</label>
+							<input asp-for="Name" class="form-control" placeholder="Name">
+							<span class="text-danger" asp-validation-for="Name"></span>
+						</div>
+						<div class="form-group">
+							<label asp-for="Surname">Surname</label>
+							<input asp-for="Surname" class="form-control" placeholder="Surname">
+							<span class="text-danger" asp-validation-for="Surname"></span>
+						</div>
+						<div class="form-group">
+							<label asp-for="TwitterLink">TwitterLink</label>
+							<input asp-for="TwitterLink" class="form-control" placeholder="TwitterLink">
+							<span class="text-danger" asp-validation-for="TwitterLink"></span>
+						</div>
+						<div class="form-group">
+							<label asp-for="FacebookLink">FacebookLink</label>
+							<input asp-for="FacebookLink" class="form-control" placeholder="FacebookLink">
+							<span class="text-danger" asp-validation-for="FacebookLink"></span>
+						</div>
+						<div class="form-group">
+							<label asp-for="InstagramLink">InstagramLink</label>
+							<input asp-for="InstagramLink" class="form-control" placeholder="InstagramLink">
+							<span class="text-danger" asp-validation-for="InstagramLink"></span>
+						</div>
+						<div class="form-group">
+							<label asp-for="LinkedinLink">LinkedinLink</label>
+							<input asp-for="LinkedinLink" class="form-control" placeholder="LinkedinLink">
+							<span class="text-danger" asp-validation-for="LinkedinLink"></span>
+						</div>
+						<div class="form-group">
+							<label asp-for="PositionId">Position</label>
+							<select asp-for="PositionId" class="form-control" asp-items="new SelectList(Model.Positions,nameof(Position.Id),nameof(Position.Name))">
+								<option selected disabled>Choose position</option>
+							</select>
+							<span class="text-danger" asp-validation-for="PositionId"></span>
+						</div>
+						<button type="submit" class="btn btn-primary me-2">Submit</button>
+						<a asp-action="Index" class="btn btn-light">Cancel</a>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
